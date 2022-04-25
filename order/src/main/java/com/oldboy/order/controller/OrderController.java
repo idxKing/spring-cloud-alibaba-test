@@ -23,11 +23,12 @@ public class OrderController {
     @GetMapping("/getOrder")
     public String orderController() {
 
+        //
 //        String stock = restTemplate.getForObject("http://stock-service/stock/remove", String.class);
 
         String remove = stockService.remove();
         String addProduct = productService.addProduct();
 
-        return "order---" + remove + "-----" + addProduct;
+        return "order-----" + remove + "-----" + addProduct;
     }
 }
